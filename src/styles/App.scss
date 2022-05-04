@@ -1,0 +1,19 @@
+.title {
+    color: red;
+  }
+.image{
+  height: 50px;
+  width: 50px;
+}
+.sentence{
+  font-size: 6px;
+  width: 50px;
+}
+
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 16px;
+}
