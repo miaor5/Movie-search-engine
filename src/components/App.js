@@ -17,10 +17,17 @@ const App = () => {
     });
   }, []);
 
+  const getYear = () => {
+    const movieYear = data.map((movie) => movie.year);
+    const uniqueYear = movieYear.filter((year, index) => {
+      return movieYear.indexOf(year) === index;
+    });
+    return uniqueYear;
+  };
   return (
     <>
       <h1 className="title">Owen Wilson's "wow"</h1>
-      <Filters handleFilterMovie={handleFilterMovie} />
+      <Filters handleFilterMovie={handleFilterMovie} getYear={getYear()} />
       <MovieSceneList listData={data} searchMovie={searchMovie} />
     </>
   );
