@@ -1,10 +1,10 @@
 import FilterMovie from './FilterMovie';
 
-function Filters() {
+function Filters(props) {
   return (
     <>
       <form>
-        <FilterMovie />
+        <FilterMovie handleFilterMovie={props.handleFilterMovie} />
       </form>
     </>
   );
