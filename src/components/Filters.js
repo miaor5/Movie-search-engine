@@ -3,7 +3,7 @@ import FilterYear from './FilterYear';
 function Filters(props) {
   return (
     <>
-      <form>
+      <form className="formFilters">
         <FilterMovie
           handleFilterMovie={props.handleFilterMovie}
           searchMovie={props.searchMovie}

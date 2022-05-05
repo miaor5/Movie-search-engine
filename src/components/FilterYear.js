@@ -14,7 +14,7 @@ function FilterYear(props) {
   };
   return (
     <>
-      <label htmlFor="">Year</label>
+      <label className="label">Year:</label>
       <select name="" id="" onChange={handleChange} value={props.filterYears}>
         <option value="0">Seleccione el año</option>
         {renderYear()}

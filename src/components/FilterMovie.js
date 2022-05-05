@@ -3,10 +3,11 @@ function FilterMovie(props) {
     ev.preventDefault();
     props.handleFilterMovie(ev.target.value);
   };
+
   return (
-    <form>
-      <label>
-        Movie
+    <form className="formFilterName">
+      <label className="label">
+        Movie:
         <input
           type="search"
           name="search"

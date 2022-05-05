@@ -10,6 +10,7 @@ import MovieSceneDetail from './MovieSceneDetail';
 const App = () => {
   const [data, setData] = useState([]);
   const [searchMovie, setSearchMovie] = useState('');
+
   const [filterYears, setFilterYears] = useState(0);
 
   const handleFilterYear = (value) => {
@@ -61,8 +62,7 @@ const App = () => {
   //aqui heemos añadido un condicional, porque sino no salia
   const movieId = dataPath !== null ? dataPath.params.movieId : null;
   const movieFound = data.find((movie) => movie.id === movieId);
-  console.log(movieId);
-  console.log(data);
+
   return (
     <>
       <h1 className="title">Owen Wilson's "wow"</h1>
@@ -78,7 +78,10 @@ const App = () => {
                 handleFilterYear={handleFilterYear}
                 filterYears={filterYears}
               />
-              <MovieSceneList movieFilters={movieFilters} />
+              <MovieSceneList
+                movieFilters={movieFilters}
+                searchMovie={searchMovie}
+              />
             </>
           }
         />
