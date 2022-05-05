@@ -4,7 +4,7 @@ const getApiData = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      const dataClean = data.map((movie) => {
+      const dataClean = data.map((movie, index) => {
         return {
           poster: movie.poster,
           movieName: movie.movie,
@@ -12,6 +12,7 @@ const getApiData = () => {
           year: movie.year,
           director: movie.director,
           audio: movie.audio,
+          id: index.toString(),
         };
       });
       return dataClean;

@@ -4,8 +4,15 @@ function Filters(props) {
   return (
     <>
       <form>
-        <FilterMovie handleFilterMovie={props.handleFilterMovie} />
-        <FilterYear getYear={props.getYear} />
+        <FilterMovie
+          handleFilterMovie={props.handleFilterMovie}
+          searchMovie={props.searchMovie}
+        />
+        <FilterYear
+          getYear={props.getYear}
+          handleFilterYear={props.handleFilterYear}
+          filterYears={props.filterYears}
+        />
       </form>
     </>
   );
