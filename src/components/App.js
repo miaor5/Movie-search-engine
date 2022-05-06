@@ -7,7 +7,7 @@ import '../styles/App.scss';
 import Filters from './Filters';
 import MovieSceneDetail from './MovieSceneDetail';
 import ls from '../services/LocalStorage';
-
+import { FaArrowCircleLeft } from 'react-icons/fa';
 const App = () => {
   const [data, setData] = useState(ls.get('movie', []));
   const [searchMovie, setSearchMovie] = useState('');
@@ -107,7 +107,12 @@ const App = () => {
         />
         <Route
           path="/movie/:movieId"
-          element={<MovieSceneDetail movie={movieFound} />}
+          element={
+            <MovieSceneDetail
+              movie={movieFound}
+              FaArrowCircleLeft={FaArrowCircleLeft}
+            />
+          }
         />
       </Routes>
     </>

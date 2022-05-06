@@ -15,7 +15,9 @@ function MovieSceneDetail(props) {
           <a className="audio" href={props.movie.audio} target="_blank ">
             El audio de la pelicula
           </a>
-          <Link to="/">Atrás</Link>
+          <Link to="/" className="arrow">
+            <props.FaArrowCircleLeft />
+          </Link>
         </nav>
       </div>
     </div>
