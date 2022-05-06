@@ -6,11 +6,11 @@ import MovieSceneList from './MovieSceneList';
 import '../styles/App.scss';
 import Filters from './Filters';
 import MovieSceneDetail from './MovieSceneDetail';
+import ls from '../services/LocalStorage';
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(ls.get('movie', []));
   const [searchMovie, setSearchMovie] = useState('');
-
   const [filterYears, setFilterYears] = useState(0);
 
   const handleFilterYear = (value) => {
@@ -21,10 +21,17 @@ const App = () => {
   };
   //asi llamamos al API que esta en sercivios
   useEffect(() => {
-    getDataApi().then((dataClean) => {
-      setData(dataClean);
-    });
+    if (data.length === 0) {
+      getDataApi().then((dataClean) => {
+        setData(dataClean);
+      });
+    }
   }, []);
+  //Guardamos los datos en el local storage en un useEffect, para que esten disponible para arrancar la pagina.?????
+  useEffect(() => {
+    ls.set('movie', data);
+  }, [data]);
+
   //Esta función crea la lista de las options, y la sugunda parte de esta funcion me aseguro de que no se repitan los años
   const getYear = () => {
     const movieYear = data.map((movie) => movie.year);
@@ -55,7 +62,20 @@ const App = () => {
       } else {
         return filterYears === movie.year;
       }
+    })
+    //ordenar alfabeticamnete el array
+    .sort(function (a, b) {
+      var nameA = a.movieName.toUpperCase();
+      var nameB = b.movieName.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
     });
+
   ///AQUI ESTAN LAS ROUTES
   const { pathname } = useLocation();
   const dataPath = matchPath('/movie/:movieId', pathname);

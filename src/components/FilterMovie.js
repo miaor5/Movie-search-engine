@@ -11,9 +11,10 @@ function FilterMovie(props) {
         <input
           type="search"
           name="search"
-          placeholder="Movie"
+          placeholder="Ejem: Cars"
           onChange={handleSearch}
           value={props.searchMovie}
+          className="inputTexto"
         />
       </label>
     </div>

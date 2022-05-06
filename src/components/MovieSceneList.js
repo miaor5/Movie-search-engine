@@ -1,9 +1,6 @@
 import MovieSceneItem from './MovieSceneItem';
 
 function MovieSceneList(props) {
-  console.log(props.movieName);
-  console.log(props.movieFilters.lenght);
-
   const movieResult = props.movieFilters.map((movie, index) => {
     return (
       <li key={index} className="card">

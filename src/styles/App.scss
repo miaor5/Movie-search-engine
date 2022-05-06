@@ -1,8 +1,11 @@
-body{ background-image: url("https://p1.pxfuel.com/preview/246/692/2/background-pattern-texture-color.jpg");;}
+body{ background-image: url("https://p1.pxfuel.com/preview/246/692/2/background-pattern-texture-color.jpg");;
+padding: 10px 60px;
+}
 .title {
     color: white;
     text-align: center;
     font-size: 50px;
+    padding-bottom: 20px;
   }
 
 .card{
@@ -65,5 +68,119 @@ body{ background-image: url("https://p1.pxfuel.com/preview/246/692/2/background-
 }
 
 //Estilos de la details Card
+
+.detailCard{
+  text-align: center;
+  width: 1000px;
+  background-color: antiquewhite;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.imageDetail{
+  width: 400px;
+  height: 400px;
+  
+}
+.textDetail{
+  padding-top: 80px;
+  padding-right: 40px;
+  
+  .titleDetail{
+    font-size: 25px;
+  }
+  .fullSentence{
+    font-size: 18px;
+  }
+  .director{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .links{
+    display: grid;
+    .audio{
+      padding-bottom: 20px;
+    }
+  }
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+  .detailCard{
+    text-align: center;
+    width: 600px;
+    background-color: antiquewhite;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .imageDetail{
+    width: 250px;
+    height: 300px;  
+}
+  .textDetail{
+  padding-top: 10px;
+  padding-right: 10px;
+}}
+@media all and (max-width: 480px) {
+  body{
+    padding-left:25px;
+  }
+  .title {
+    font-size: 18px;
+    color: white;
+  }
+  .formFilters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+  .inputTexto{
+    width: 240px;
+  }
+  .detailCard{
+    text-align: center;
+    width: 280px;
+    background-color: antiquewhite;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .imageDetail{
+      width: 180px;
+      height: 200px;  
+ }
+
+  .textDetail{
+      padding-top: 15px;
+      padding-right: 10px;
+      
+      .titleDetail{
+        font-size: 14px;
+      }
+      .fullSentence{
+        font-size: 11px;
+      }
+      .director{
+        font-size: 11px;
+        font-weight: bold;
+      }
+      .links{
+        display: grid;
+        .audio{
+          padding-bottom: 20px;
+          font-size: 12px;
+        }
+      }
+    }
+   
+  }
+
+
+
 
 
