@@ -1,5 +1,12 @@
+import { useHistory } from 'react-router-dom';
+
 function MovieSceneDetail(props) {
-  console.log(props);
+  // const history = useHistory();
+  // const handleClick = () => {
+  //   history.push('/');
+  // };
+  // const navigate = useNavigate();
+  // navigate('/');
   return (
     <>
       <img
@@ -13,6 +20,7 @@ function MovieSceneDetail(props) {
       <a href={props.movie.audio} target="_blank ">
         El audio de la pelicula
       </a>
+      <button>Atras</button>
     </>
   );
 }

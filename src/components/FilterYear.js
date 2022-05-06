@@ -1,5 +1,5 @@
-function FilterYear(props) {
-  const renderYear = () => {
+function FilterYear(props, ev) {
+  const renderYear = (ev) => {
     return props.getYear.map((year, index) => {
       return (
         <option key={index} value={year}>
