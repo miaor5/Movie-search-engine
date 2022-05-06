@@ -5,7 +5,7 @@ function FilterMovie(props) {
   };
 
   return (
-    <form className="formFilterName">
+    <div className="formFilterName">
       <label className="label">
         Movie:
         <input
@@ -16,7 +16,7 @@ function FilterMovie(props) {
           value={props.searchMovie}
         />
       </label>
-    </form>
+    </div>
   );
 }
 export default FilterMovie;
