@@ -16,7 +16,7 @@ function FilterYear(props, ev) {
     <>
       <label className="label">Year:</label>
       <select name="" id="" onChange={handleChange} value={props.filterYears}>
-        <option value="0">Seleccione el año</option>
+        <option value="0">Select the year</option>
         {renderYear()}
       </select>
     </>

@@ -13,7 +13,7 @@ function MovieSceneDetail(props) {
         <p className="director">{props.movie.director}</p>
         <nav className="links">
           <a className="audio" href={props.movie.audio} target="_blank ">
-            El audio de la pelicula
+            The audio of the movie
           </a>
           <Link to="/" className="arrow">
             <props.FaArrowCircleLeft />
